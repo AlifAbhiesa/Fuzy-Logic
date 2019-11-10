@@ -18,3 +18,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::any('/Fuzzy', 'ControllerFuzzy@index');
+Route::post('/Register', 'RegisterController@store');
+Route::get('/Verification', 'RegisterController@verification');
+Route::post('/StoreMerchant','RegisterController@storeMerchantData');
+Route::post('/Login','RegisterController@LoginData');
+Route::post('/Logout','RegisterController@Logout');
+Route::post('/Users/Check','RegisterController@checkAccount');
+Route::post('/Merchant/getMerchatNearBy','MerchantController@getMerchatNearBy');
